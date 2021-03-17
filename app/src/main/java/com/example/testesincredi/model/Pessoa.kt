@@ -1,5 +1,5 @@
 package com.example.testesincredi.model
 
-class Pessoa {
+import java.io.Serializable
 
-}
+class Pessoa (): Serializable

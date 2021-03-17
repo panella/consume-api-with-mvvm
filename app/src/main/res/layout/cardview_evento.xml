@@ -26,30 +26,45 @@
 
         <TextView
             android:id="@+id/textTitulo"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
             android:text="Titulo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/imagem"
             app:layout_constraintTop_toTopOf="@+id/imagem" />
 
+        <ImageView
+            android:id="@+id/imagemLocalizacao"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/ic_action_location_on"
+            app:layout_constraintBottom_toBottomOf="@+id/textLocalizacao"
+            app:layout_constraintEnd_toStartOf="@+id/textLocalizacao"
+            app:layout_constraintTop_toTopOf="@+id/textLocalizacao"
+            app:layout_constraintVertical_bias="1.0" />
+
         <TextView
             android:id="@+id/textLocalizacao"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
             android:layout_marginTop="4dp"
             android:text="Localixação"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/textTitulo"
             app:layout_constraintTop_toBottomOf="@+id/textTitulo" />
 
         <TextView
             android:id="@+id/textData"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Data"
-            app:layout_constraintStart_toStartOf="@+id/textLocalizacao"
+            app:layout_constraintStart_toStartOf="@+id/imagemLocalizacao"
             app:layout_constraintTop_toBottomOf="@+id/textLocalizacao" />
 
         <TextView

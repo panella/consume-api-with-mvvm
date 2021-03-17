@@ -6,4 +6,166 @@
     android:layout_height="match_parent"
     tools:context=".view.activity.DetalheEventoActivity">
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/amarelo_bright"
+                app:layout_collapseMode="pin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/botaoReturn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/amarelo_bright"
+                    android:src="@drawable/ic_arrow_black" />
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Detalhes"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <ImageView
+                android:id="@+id/imageFundo"
+                android:layout_width="0dp"
+                android:layout_height="244dp"
+                android:background="@color/amarelo_night"
+                android:paddingHorizontal="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textTitulo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Titulo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageFundo" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/ic_action_location_on"
+                android:tint="@color/teal_700"
+                app:layout_constraintBottom_toBottomOf="@+id/textLocal"
+                app:layout_constraintEnd_toStartOf="@+id/textLocal"
+                app:layout_constraintTop_toTopOf="@+id/textLocal"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/textLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Local"
+                app:layout_constraintStart_toStartOf="@+id/textTitulo"
+                app:layout_constraintTop_toBottomOf="@+id/textTitulo" />
+
+            <TextView
+                android:id="@+id/textData"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="50dp"
+                android:text="Data"
+                app:layout_constraintEnd_toStartOf="@+id/textValorNumerico"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textLocal"
+                app:layout_constraintTop_toBottomOf="@+id/textLocal" />
+
+            <TextView
+                android:id="@+id/textPreco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preco: "
+                app:layout_constraintBottom_toBottomOf="@+id/textData"
+                app:layout_constraintEnd_toStartOf="@+id/textValorNumerico"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textData"
+                app:layout_constraintTop_toTopOf="@+id/textData" />
+
+            <TextView
+                android:id="@+id/textValorNumerico"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="200000000000,00"
+                app:layout_constraintBottom_toBottomOf="@+id/textPreco"
+                app:layout_constraintEnd_toEndOf="@+id/textTitulo"
+                app:layout_constraintTop_toTopOf="@+id/textPreco" />
+
+            <TextView
+                android:id="@+id/textDescricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"
+                android:paddingHorizontal="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textData" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/lista_transacoes_adiciona_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp">
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/lista_transacoes_adiciona_receita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_verified" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/lista_transacoes_adiciona_despesa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_share" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

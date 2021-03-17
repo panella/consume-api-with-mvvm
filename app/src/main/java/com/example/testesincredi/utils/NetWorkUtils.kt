@@ -30,7 +30,7 @@ class NetworkUtils {
 		}
 
 		fun configuraAPI(): API {
-			val retrofit = getRetrofitInstance("http://5f5a8f24d44d640016169133.mockapi.io/")
+			val retrofit = getRetrofitInstance(Constants.BASE_URL)
 			return retrofit.create(API::class.java)
 		}
 

@@ -9,19 +9,21 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class EventoWebService(application: Application): AndroidViewModel(application) {
+class EventoWebService(application: Application) : AndroidViewModel(application) {
 
     fun respostaRecebeEventos(callback: (List<Evento>?) -> Unit) {
         val resultadoListaEventos = callbackRecebeEventos()
 
-        resultadoListaEventos.enqueue(object: Callback<List<Evento>> {
+        resultadoListaEventos.enqueue(object : Callback<List<Evento>> {
             override fun onFailure(call: Call<List<Evento>>, t: Throwable) {
                 t.printStackTrace()
                 callback(null)
             }
 
             override fun onResponse(call: Call<List<Evento>>, response: Response<List<Evento>>) {
-                callback.invoke(response.body())
+                if (response.isSuccessful) {
+                    callback.invoke(response.body())
+                }
             }
         })
     }
