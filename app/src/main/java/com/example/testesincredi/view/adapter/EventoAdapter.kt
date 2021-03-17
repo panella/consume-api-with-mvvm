@@ -34,8 +34,7 @@ class EventoAdapter(
 	}
 
 	class ViewHolder(
-		itemView: View,
-		private val context: Context): RecyclerView.ViewHolder(itemView) {
+		itemView: View, private val context: Context): RecyclerView.ViewHolder(itemView) {
 		fun bindView(evento: Evento) {
 			configuraTitulo(evento)
 			configuraLocalizacao(evento)

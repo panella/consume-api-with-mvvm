@@ -40,7 +40,7 @@
             android:id="@+id/imagemLocalizacao"
             android:layout_width="12dp"
             android:layout_height="12dp"
-            android:src="@drawable/ic_action_location_on"
+            app:srcCompat="@drawable/ic_action_location_on"
             app:layout_constraintBottom_toBottomOf="@+id/textLocalizacao"
             app:layout_constraintEnd_toStartOf="@+id/textLocalizacao"
             app:layout_constraintTop_toTopOf="@+id/textLocalizacao"

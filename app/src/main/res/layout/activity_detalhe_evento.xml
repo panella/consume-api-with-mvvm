@@ -29,10 +29,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/amarelo_bright"
-                    android:src="@drawable/ic_arrow_black" />
+                    app:srcCompat="@drawable/ic_arrow_black" />
 
                 <TextView
-                    android:id="@+id/toolbar_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -74,7 +73,7 @@
             <ImageView
                 android:layout_width="12dp"
                 android:layout_height="12dp"
-                android:src="@drawable/ic_action_location_on"
+                app:srcCompat="@drawable/ic_action_location_on"
                 app:layout_constraintBottom_toBottomOf="@+id/textLocal"
                 app:layout_constraintEnd_toStartOf="@+id/textLocal"
                 app:layout_constraintTop_toTopOf="@+id/textLocal"
@@ -145,7 +144,6 @@
     </androidx.core.widget.NestedScrollView>
 
     <com.github.clans.fab.FloatingActionMenu
-        android:id="@+id/fab_maisOpcoes"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"
@@ -167,7 +165,7 @@
             android:id="@+id/botaoCheckIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_action_verified"
+            android:src="@drawable/ic_action_check"
             app:fab_colorNormal="#607890"
             app:fab_colorPressed="#2945fc"
             app:fab_colorRipple="#3216e2"

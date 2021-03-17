@@ -6,8 +6,7 @@ import com.example.testesincredi.viewmodel.database.EventoDAO
 import com.example.testesincredi.viewmodel.retrofit.EventoWebService
 
 class Repositorio private constructor(
-	private val eventoDAO: EventoDAO,
-	private val eventoWebService: EventoWebService) {
+	private val eventoDAO: EventoDAO, private val eventoWebService: EventoWebService) {
 
 	companion object {
 		@Volatile
@@ -48,6 +47,18 @@ class Repositorio private constructor(
 		}
 		else {
 			callback.invoke(Unit)
+		}
+	}
+
+	fun enviaCheckIn(
+		context: Context, nome: String, email: String, id: String, callback: (Boolean) -> Unit) {
+		val conectado = NetworkUtils.estaConectado(context)
+		if (conectado) {
+			val map = mapOf("name" to nome, "email" to email, "eventId" to id)
+			eventoWebService.respostaEnviaCheckin(map, callback)
+		}
+		else {
+			callback.invoke(false)
 		}
 	}
 }

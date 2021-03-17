@@ -6,11 +6,16 @@ import androidx.lifecycle.ViewModel
 class ViewModel(private val repositorio: Repositorio): ViewModel() {
 	fun eventos() = repositorio.todosEventos()
 	fun recebeEventos(
-		context: Context,
-		callback: (Unit) -> Unit) = repositorio.recebeEventos(context, callback)
+		context: Context, callback: (Unit) -> Unit) = repositorio.recebeEventos(context, callback)
 
 	fun atualizaEventos(
+		context: Context, callback: (Unit) -> Unit) = repositorio.atualizaEventos(context, callback)
+
+	fun fazCheckIn(
 		context: Context,
-		callback: (Unit) -> Unit) = repositorio.atualizaEventos(context, callback)
+		nome: String,
+		email: String,
+		id: String,
+		callback: (Boolean) -> Unit) = repositorio.enviaCheckIn(context, nome, email, id, callback)
 }
 

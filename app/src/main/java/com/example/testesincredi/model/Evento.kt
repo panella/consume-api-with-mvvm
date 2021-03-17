@@ -6,7 +6,6 @@ import java.io.Serializable
 import java.math.BigDecimal
 
 class Evento(
-	val people: List<Pessoa>,
 	val date: Long,
 	val description: String,
 	val image: String,
