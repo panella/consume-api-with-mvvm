@@ -44,7 +44,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/textLocalizacao"
             app:layout_constraintEnd_toStartOf="@+id/textLocalizacao"
             app:layout_constraintTop_toTopOf="@+id/textLocalizacao"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.8"
+            app:tint="@color/teal_700" />
 
         <TextView
             android:id="@+id/textLocalizacao"
@@ -71,8 +72,9 @@
             android:id="@+id/textPreco"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:text="Preco"
+            android:layout_marginStart="120dp"
+            android:text="Preço: R$ 200000,00"
+            app:layout_constraintBottom_toBottomOf="@+id/textData"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textData"
             app:layout_constraintTop_toTopOf="@+id/textData" />

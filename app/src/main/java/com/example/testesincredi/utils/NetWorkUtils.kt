@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class NetworkUtils {
 
-    companion object {
+	companion object {
 
 		fun getRetrofitInstance(path: String): Retrofit {
 			val okHttp = configuraOkHttp()
@@ -34,10 +34,10 @@ class NetworkUtils {
 			return retrofit.create(API::class.java)
 		}
 
-        @Suppress("DEPRECATION")
+		@Suppress("DEPRECATION")
 		fun estaConectado(context: Context): Boolean {
 			val cm = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 			return cm.activeNetworkInfo != null && cm.activeNetworkInfo!!.isConnected
 		}
-    }
+	}
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -48,7 +48,7 @@
                 android:layout_height="244dp"
                 android:background="@color/amarelo_night"
                 android:paddingHorizontal="8dp"
-                android:paddingTop="4dp"
+                android:paddingTop="8dp"
                 android:paddingBottom="12dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -63,6 +63,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="12dp"
+                android:textSize="16sp"
                 android:ellipsize="end"
                 android:singleLine="true"
                 android:text="Titulo"
@@ -74,11 +75,11 @@
                 android:layout_width="12dp"
                 android:layout_height="12dp"
                 android:src="@drawable/ic_action_location_on"
-                android:tint="@color/teal_700"
                 app:layout_constraintBottom_toBottomOf="@+id/textLocal"
                 app:layout_constraintEnd_toStartOf="@+id/textLocal"
                 app:layout_constraintTop_toTopOf="@+id/textLocal"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="0.8"
+                app:tint="@color/teal_700" />
 
             <TextView
                 android:id="@+id/textLocal"
@@ -108,7 +109,7 @@
                 android:id="@+id/textPreco"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Preco: "
+                android:text="Preço:"
                 app:layout_constraintBottom_toBottomOf="@+id/textData"
                 app:layout_constraintEnd_toStartOf="@+id/textValorNumerico"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -144,28 +145,47 @@
     </androidx.core.widget.NestedScrollView>
 
     <com.github.clans.fab.FloatingActionMenu
-        android:id="@+id/lista_transacoes_adiciona_menu"
+        android:id="@+id/fab_maisOpcoes"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:paddingBottom="10dp">
+        android:paddingBottom="10dp"
+        fabmenu_backgroundColor="#ccffffff"
+        app:menu_colorNormal="#86e6a0"
+        app:menu_colorPressed="#53a565"
+        app:menu_colorRipple="#86e6a0"
+        app:menu_labels_colorNormal="#fff"
+        app:menu_labels_ellipsize="end"
+        app:menu_labels_singleLine="true"
+        app:menu_labels_textColor="#000">
 
 
         <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/lista_transacoes_adiciona_receita"
+            android:id="@+id/botaoCheckIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_action_verified" />
+            android:src="@drawable/ic_action_verified"
+            app:fab_colorNormal="#607890"
+            app:fab_colorPressed="#2945fc"
+            app:fab_colorRipple="#3216e2"
+            app:fab_label="Check-In"
+            app:fab_size="mini" />
 
         <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/lista_transacoes_adiciona_despesa"
+            android:id="@+id/botaoCompartilhar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_action_share" />
+            android:src="@drawable/ic_action_share"
+            app:fab_colorNormal="#B22318"
+            app:fab_colorPressed="#E8004A"
+            app:fab_colorRipple="#C20024"
+            app:fab_label="Compartilhar"
+            app:fab_size="mini" />
 
     </com.github.clans.fab.FloatingActionMenu>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

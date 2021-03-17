@@ -6,9 +6,9 @@ import com.example.testesincredi.viewmodel.ViewModelFactory
 import com.example.testesincredi.viewmodel.database.BancoDeDados
 import com.example.testesincredi.viewmodel.retrofit.EventoWebService
 
-object InjectorUtils{
-    fun provideViewModelFactory(application: Application): ViewModelFactory{
-        val repositorio = Repositorio.getInstance(BancoDeDados.getInstance().eventoDAO, EventoWebService(application))
-        return ViewModelFactory(repositorio)
-    }
+object InjectorUtils {
+	fun provideViewModelFactory(application: Application): ViewModelFactory {
+		val repositorio = Repositorio.getInstance(BancoDeDados.getInstance().eventoDAO, EventoWebService(application))
+		return ViewModelFactory(repositorio)
+	}
 }
